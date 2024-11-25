@@ -64,9 +64,9 @@
 
             // 入力フォームの値をチェック
             if (minutes < 0 || seconds < 0) {
-                document.getElementById('errors').innerText = "マイナスは入力できません";
-                document.getElementById('errors').classList.remove('hidden');
-                return;
+                document.getElementById('error').innerText = "マイナスは入力できません";    // 'errors'を'error'に修正
+                document.getElementById('error').classList.remove('hidden');             // 同上
+                return minutes, seconds;
             }
 
             document.getElementById('error').classList.add('hidden');
@@ -121,7 +121,7 @@
 
         // アラートを開始する関数
         function startAlert() {
-            let alertInterval = setInterval(() => {
+            alertInterval = setInterval(() => {     //alertIntervalをstopAlert関数内で使えるように 'let'を削除
                 document.body.style.backgroundColor = document.body.style.backgroundColor === 'red' ? 'white' : 'red';
             }, 1000);
             document.getElementById('alertStop').classList.remove('hidden')
