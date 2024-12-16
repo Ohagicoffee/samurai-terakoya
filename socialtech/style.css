@@ -72,3 +72,47 @@ header {
     right: 0;
     z-index: 10;
 }
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*＝＝＝＝＝VISION＝＝＝＝＝*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+#vision {
+    margin: 80px auto;
+}
+#vision > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.vision-box {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 300px;
+    position: relative;
+}
+.vision-box > img {
+    width: 100%;
+    position: relative;
+    z-index: 30;
+}
+.vision-box > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 31;
+    margin-right: 20px;
+}
+.vision-box > div > h4 {
+    color: #2710d5;
+    font-size: 19px;
+    margin-top: 80px;
+}
+.vision-box > div >h4::first-letter {
+    font-size: 40px;
+}
+.vision-box > div > h5 {
+    font-size: 20px;
+    margin: 0 0 0 0;
+}
+.vision-box > div > p {
+    margin-top: 10px;
+}
