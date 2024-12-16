@@ -151,3 +151,134 @@ header {
     height: 368px;
     margin: 40px;
 }
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*＝＝＝＝＝MISSION＝＝＝＝＝*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+h2 {
+  margin-top: 40px;
+}
+h2::after {
+  content: url("images/line.png");
+  margin-left: 10px;
+}
+h3 {
+  font-size: 27px;
+}
+#mission {
+  margin: 80px auto;
+}
+#mission-flex {
+  display: flex;
+}
+#mission-flex > div {
+  width: 50%;
+  margin: 20px;
+}
+#mission-photo {
+  width: 100%;
+}
+#s2dgs {
+  margin-top: 50px;
+  width: 100%;
+}
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*＝＝＝＝＝PRODUCT＝＝＝＝＝*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+#product {
+  background-color: #fafafa;
+  margin: 80px 0 80px 0;
+  padding: 10px 40px 0 40px;
+}
+#product .product-flex {
+  margin-top: 40px;
+  display: flex;
+}
+#product-left {
+  width: 50%;
+  margin-right: 20px;
+}
+#product-right {
+  width: 50%;
+  margin-right: 20px;
+  margin-top: 80px;
+}
+#product-left > div {
+  position: relative;
+  height: 480px;
+  margin-right: 20px;
+}
+#product-right > div {
+  position: relative;
+  height: 480px;
+  margin-left: 20px;
+}
+.product-photo {
+  width: 100%;
+}
+.product-explain {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  margin: 0 40px 0 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+.product-explain > span {
+  color: #2710d5;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+.product-explain > h3 {
+  margin: 5px 0 5px 0;
+}
+
+.product-explain > p {
+  font-size: 14px;
+  margin: 0;
+}
+#product-more {
+  text-align: center;
+}
+#product-more > a {
+  position: relative;
+  bottom: -42px;
+}
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*＝＝＝＝＝ABOUTUS＝＝＝＝＝*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+#aboutus {
+  margin: 80px auto;
+}
+#aboutus > div {
+  display: flex;
+}
+.culture-img {
+  width: 50%;
+  align-self: flex-start; /*上寄せ*/
+}
+.culture-img2 {
+  margin-top: 50px;
+  width: 100%;
+}
+.culture-table {
+  margin-right: 50px;
+}
+.culture-num {
+  font-size: 80px;
+  color: #2710d5;
+  padding: 0 20px 0 0;
+}
+.culture-table th {
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+.culture-en {
+  color: #2710d5;
+  font-size: 24px;
+}
+.culture-description{
+  margin: 0;
+}
