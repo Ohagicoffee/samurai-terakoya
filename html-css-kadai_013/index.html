@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>これはHTML/CSS課題13です。</title>
+        <meta charset = "utf-8">
+        <meta name = "description" content = "SAMURAI CAFEは忙しい社会に生きるすべての人々にくつろぎの空間を提供します。">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <!--ヘッダー-->
+        <header>
+            <!--ロゴ-->
+            <a href = "index.html">
+                <img src = "images/logo.png" alt = "トップページに戻る">
+            </a>
+            <!--PC用ナビゲーション-->
+            <nav id = "nav-pc">
+                <ul>
+                    <li><a href = "index.html">CONCEPT</a></li>
+                    <li><a href = "index.html">PRODUCT</a></li>
+                    <li><a href = "index.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <!--スマホ用メニューボタン-->
+            <button id = "menu-sp" onclick = "document.getElementById('nav-sp').style.display = 'block'">
+                <img src = "images/button-menu.png" alt = "ナビゲーションを開く">
+            </button>
+            <!--スマホ用ナビゲーション-->
+            <div id = "nav-sp">
+                <button id = "close" onclick = "document.getElementById('nav-sp').style.display = 'none'">
+                    <img src = "images/button-close.png" alt = "ナビゲーションを閉じる">
+                </button>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a id = "logo-sp" href = "index.html" onclick = "document.getElementById('nav-sp').style.display = 'none'">
+                                <img src = "images/logo-sp.png" alt = "トップページに戻る">
+                            </a>
+                        </li>
+                        <li>
+                            <a class = "menu" href = "index.html#concept" onclick = "document.getElementById('nav-sp').style.display = 'none'">CONCEPT</a>
+                        </li>
+                        <li>
+                            <a class = "menu" href = "index.html#product" onclick = "document.getElementById('nav-sp').style.display = 'none'">PRODUCT</a>
+                        </li>
+                        <li>
+                            <a class = "menu" href = "index.html#contact" onclick = "document.getElementById('nav-sp').style.display = 'none'">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!--スマホ用ナビゲーションここまで-->
+        </header>
+        <main>
+            <h2>Organic Cafe</h2>
+            <h3>自家焙煎コーヒーが買えるお店</h3>
+            <img src = "images/main-image.jpg" alt = "店内でコーヒーをそそぐ">
+
+        </main>
+    </body>
+</html>
