@@ -74,31 +74,31 @@ main > img {
         background-color: transparent;
         border: none;
     }
-    #nav-sp nav ul {
+    #nav-sp ul {
         padding: 0;
     }
-    #nav-sp nav li {
+    #nav-sp ul li {
         list-style: none;
     }
     #logo-sp {
         margin: 80px 0 30px 20px;
     }
     /*ナビゲーションのリンク*/
-    #nav-sp nav a {
+    #nav-sp li a {
         display: block;
     }
-    #nav-sp nav a:hover {
+    #nav-sp li a:hover {
         color: #ffffff;
         text-decoration: underline;
     }
-    #nav-sp nav a:visited {
+    #nav-sp li a:visited {
         color: #ffffff;
     }
-    #nav-sp a:hover {
+    #nav-sp li a:hover {
         color: #ffffff;
         text-decoration: underline;
     }
-    #nav-sp a:active {
+    #nav-sp li a:active {
         color: #ffffff;
     }
     #nav-sp .menu {
