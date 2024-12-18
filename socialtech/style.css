@@ -489,5 +489,56 @@ footer {
     width: 100%;
     margin: 0;
   }
-
+  /*＝＝＝＝＝PRODUCT＝＝＝＝＝*/
+  #product {
+    margin: 0;
+    padding: 10px 20px 0 20px;
+  }
+  #product .product-flex {
+    flex-direction: column;
+    margin: 0;
+  }
+  #product-left, #product-right {
+    width: 100%;
+    margin: 0;
+  }
+  #product-left > div, #product-right > div {
+    height: auto;
+    margin: 0;
+  }
+  .product-explain > h3 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  #product-more {
+    text-align: left;
+  }
+  /*＝＝＝＝＝ABOUT US＝＝＝＝＝*/
+  #aboutus {
+    margin: 80px 20px;
+  }
+  #aboutus > div {
+    flex-direction: column;
+  }
+  .culture-table th {
+    font-size: 16px;
+  }
+  .culture-table {
+    margin-right: 0;
+    padding-right: 20px;
+    order: 2;
+  }
+  .culture-img {
+    width: 100%;
+    order: 1;
+  }
+  .culture-img2 {
+    margin-top: 0;
+  }
+  .culture-num {
+    padding: 0;
+  }
+  .culture-description {
+    margin: 0;
+  }
 }
