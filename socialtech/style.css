@@ -455,6 +455,78 @@ footer {
 .fivegoals-p {
   margin: 0;
 }
+/*＝＝＝＝＝PRODUCT_HTML＝＝＝＝＝*/
+.product-main-inner {
+  background-image: url("images/product/product-main.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+#product-title {
+  background-color: #2710d5;
+  width: 368px;
+  color: #ffffff;
+  height: 496px;
+  border-radius: 0 248px 248px 0;
+  position: relative;
+}
+#product-title h1 {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  font-size: 80px;
+  line-height: 1;
+}
+#product-title > p {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  font-size: 16px;
+}
+/*PRODUCT確認*/
+.product-section {
+  display:flex;
+  padding: 20px 20px 0;
+}
+.product-section .product-section-img {
+  width: 450px;
+}
+.product-section-left .product-section-img img {
+  width: 100%;
+  padding: 0 40px 30px 0;
+  border-radius: 0 432px 0 0;
+}
+.product-section-left .product-read {
+  width: 50%;
+  flex-grow: 1;
+}
+.product-section-left .product-read p {
+  margin-bottom: 0;
+}
+.product-section-right {
+  justify-content: space-between;
+}
+.product-section-right .product-section-img img {
+  width: 100%;
+  padding: 0 0 30px 40px;
+  border-radius: 432px 0 0 0;
+}
+
+.product-section-right .product-read {
+  width: 500px;
+}
+.product-h2 {
+  color:#2710d5;
+  font-size: 24px;
+  margin: 0;
+}
+.product-h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*＝＝＝＝＝★レスポンシブデザイン適用★＝＝＝＝＝*/
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
 
 /*画面幅が767px以下の時*/
 @media screen and (max-width: 767px) {
