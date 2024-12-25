@@ -1,10 +1,11 @@
-$(function() {
+$(document).ready(function() {
     $(window).on({
-        'load': () => {
+        'load':()=> {
             console.log('loadイベントが発生しました');
         },
-        'scroll': ()=> {
+
+        'scroll':()=> {
             console.log('scrollイベントが発生しました');
         }
-    })
+    });
 });
