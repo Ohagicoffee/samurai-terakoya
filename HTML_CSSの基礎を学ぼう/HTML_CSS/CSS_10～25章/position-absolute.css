@@ -1,0 +1,23 @@
+.parent {
+  position: relative; /*#child3の基準要素です*/
+  height: 400px;
+  background-color: black;
+}
+#child1 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+#child2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+#child3 {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+}
