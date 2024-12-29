@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプルコード1</title>
+</head>
+<body>
+    <!-- 数字入力フォーム1 -->
+    <label for="number1">Number 1:</label>
+    <input type="number" id="number1" value="0">
+    <br>
+    <!-- 数字入力フォーム2 -->
+    <label for="number2">Number 2:</label>
+    <input type="number" id="number2" value="0">
+    <br>
+    <!-- 合計ボタン -->
+    <button onclick="showSum()">合計</button>
+    <br>
+    <!-- 結果表示エリア -->
+    結果：<span id="result"></span>
+
+    <script>
+        // 合計を計算して表示する関数
+        function showSum() {
+            let a = getInputValue("number1"); // 入力フォーム1の値を取得
+            let b = getInputValue("number2"); // 入力フォーム2の値を取得
+            let sum = calculateSum(a, b); // 合計を計算
+
+            document.getElementById("result").textContent = sum; // 結果を表示
+        }
+
+        // 指定されたIDのinput要素の値を数値として取得する関数
+        function getInputValue(id) {
+            return Number(document.getElementById(id).value);
+        }
+
+        // 合計を計算する関数
+        function calculateSum(num1, num2) {
+            return num1 + num2;
+        }
+    </script>
+</body>
+</html>
