@@ -8,8 +8,8 @@ public abstract class Kato_Chapter18 {
 		public String address = "東京都中野区〇×"; //住所
 		
 		//【コンストラクタ】
-		Kato_Chapter18(String givenName) {
-			this.givenName = givenName;	
+		Kato_Chapter18() {
+			setGivenName();	
 		}
 		
 
@@ -28,4 +28,7 @@ public abstract class Kato_Chapter18 {
 			commonIntroduce();
 			eachIntroduce();
 		}
+		
+		//setGivenNameを抽象メソッドにて記載
+		abstract public void setGivenName();
 }
