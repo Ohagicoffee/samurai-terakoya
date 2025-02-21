@@ -1,27 +1,31 @@
 package kadai_018;
- //親クラス
-abstract public class Kato_Chapter18 {
-	
-	//姓と名、住所を表すフィールド
-	public String familyName; //姓を表す
-	public String givenName; //名を表す
-	public String address; //住所を表す
-	
-	//共通の紹介を出力するメソッド
-	public void commonIntroduce() {
-		this.familyName = "加藤";
-		System.out.println("名前は" + this.familyName + givenName + "です");
-		System.out.println("住所は東京都中野区〇✖です");
-	}
-	
-	//個別の紹介を出力するメソッド(抽象メソッド)
-	abstract void eachIntroduce();
+//【親クラス】
+
+public abstract class Kato_Chapter18 {
+		//【フィールド】：姓と名と住所
+		public String familyName = "加藤"; 	//姓
+		public String givenName; 			//名
+		public String address = "東京都中野区〇×"; //住所
 		
-	
-	//紹介を実行するメソッド
-	public void exeIntroduce() {
-		//上記２つのメソッドを呼び出す
-		commonIntroduce();
-		eachIntroduce();
-	}
+		//【コンストラクタ】
+		Kato_Chapter18(String givenName) {
+			this.givenName = givenName;	
+		}
+		
+
+		//【メソッド】
+		//共通の紹介を出力する
+		public void commonIntroduce() {
+			System.out.println("名前は" + this.familyName + this.givenName + "です"); 
+			System.out.println("住所は"+ this.address + "です"); 
+		}
+		
+		//個別の紹介を出力する
+		abstract public void  eachIntroduce();
+		
+		//紹介を実行する
+		public void execIntroduce() {
+			commonIntroduce();
+			eachIntroduce();
+		}
 }
