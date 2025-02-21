@@ -1,0 +1,16 @@
+package kadai_018;
+
+public class KatoTaro_Chapter18 extends Kato_Chapter18 {
+	
+	//子クラス自身のコンストラクタを記載
+		KatoTaro_Chapter18() {
+			super("太郎");
+		}
+	
+	//親クラスの抽象メソッドを別個の処理を追加
+	public void eachIntroduce() {
+		System.out.println("私はJavaが得意です");
+	}
+	
+	
+}
