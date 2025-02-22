@@ -7,12 +7,6 @@ public abstract class Kato_Chapter18 {
 		public String givenName; 			//名
 		public String address = "東京都中野区〇×"; //住所
 		
-		//【コンストラクタ】
-		Kato_Chapter18() {
-			setGivenName();	
-		}
-		
-
 		//【メソッド】
 		//共通の紹介を出力する
 		public void commonIntroduce() {
