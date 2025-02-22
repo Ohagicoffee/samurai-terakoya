@@ -2,11 +2,7 @@ package kadai_018;
 
 public class KatoTaro_Chapter18 extends Kato_Chapter18 {
 	
-	//子クラス自身のコンストラクタを記載
-		KatoTaro_Chapter18() {
-			super();
-		}
-		
+	
 	//名を表すフィールドの値をセットする
 	public void setGivenName(){
 			this.givenName = "太郎";
