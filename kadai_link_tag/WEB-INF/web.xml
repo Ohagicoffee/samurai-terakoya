@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<web-app xmls= "http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:shemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+						http://xmlns.jcp.org/xml/ns/javaee/web-app_4.0_xsd"
+	
+	version="4.0"
+	metadata-complete="true">
+	
+	<!-- サーブレットの設定 -->
+	<servlet>
+		<servlet-name>link_servlet</servlet-name>
+		<servlet-class>sj.LinkServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>link_servlet</servlet-name>
+		<url-pattern>/link</url-pattern>
+	</servlet-mapping>
+	
+	
+
+</web-app>
+					
