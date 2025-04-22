@@ -1,0 +1,95 @@
+=======login.html==========
+
+■クエリパラメータについて
+URLの後にパラメータを付加してデータを渡すテクニックのこと。
+
+Thymeleafを使用してクエリパラメータを書くと以下。
+
+	th:if="${param.error}" style="color: red;">
+
+login.html内で上記パラメータを記載しているとすると、このクエリパラメータは、
+
+	https://www.exampe.com/login?error
+	
+となり、/loginに[?error]という情報を付け加えていることになる。
+
+※パラメータ：あるシステムや関数が動作するときに影響を与える要素や変数のこと。
+→平たく言うと、「何かを制御するための設定や条件」のようなもののこと。
+
+
+=======WebSecurityConfig.javal==========
+
+@Configuration: 設定用のクラスとして機能させる。@Beanアノテーションを付けるために必要。
+
+@EnableWebSecurity: Spring Securityによるセキュリティ機能を有効にして、
+認証・許可のルールやログイン/ログアウト処理といった各種設定を行えるようにする。
+
+@EnableMethodSecurity: メソッドレベルでのセキュリティ機能を有効にする。例えば、
+
+	@PreAuthorize( "hasRole('ADMIN')" )　
+	
+とつけると、管理者ユーザのみPreAuthorizeメソッドへのアクセスを許可する。
+
+@Bean: DIコンテナに登録されたインスタンスをBeanと呼ぶ。
+
+SecurityFilterChainインターフェース：セキュリティ設定用メソッドの SecurityFilterChain()を定義する。
+
+public class WebSecurityConfig {
+	
+	@Bean
+	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		
+		http
+			//アクセス許可に関する設定
+			.authorizeHttpRequests((requests) -> requests
+					.requestMatchers("/login", "/resources/**").permitAll() //前ユーザにアクセスを許可するURL。
+																			//(/** とパスの末尾につけることでパス配下の全ファイルが対象になる)
+					.anyRequest().authenticated() //上記以外のURLはログインが必要(ロールを問わない)
+			)
+			
+			//ログインに関する設定
+			.formLogin((form) -> form
+					.loginPage("/login")						//ログインページのURL
+					.loginProcessingUrl("/login")				//ログインフォームの送信先URL
+					.defaultSuccessUrl("/adminuser?loggedIn")   //ログイン成功時のリダイレクト先URL
+					.failureUrl("/login?error")					//ログイン失敗時のリダイレクト先URL
+					.permitAll()
+			)
+			
+			//ログアウトに関する設定
+			.logout((logout) -> logout
+				.logoutSuccessUrl("/?loggedout")				//ログアウト(が成功したとき)のURL
+				.permitAll()
+			);
+		
+		return http.build();									//引数のHttpSecurityインターフェースが持つメソッド。各設定を1つのオブジェクト
+																	に集約することができる。
+	}
+	
+	@Bean
+	PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();						//bcryptを使うために設定。bcryptはハッシュ値を生成してくれる強力なハッシュアルゴリズム。
+	}
+}
+
+また、
+	.requestMatchers("/login", "/resources/**").permitAll()
+の箇所を
+	.requestMatchers("/adminuser/**").hasRole("ADMIN")
+とすると、「管理者ユーザのみ、ユーザ管理画面にアクセスを許可したい」という意味になる。
+このとき、DBではrole_nameを"ROLE_ADMIN"としているのに、"ADMIN"と指定をするのは
+Spring Securityの内部では"ROLE_～～"の"ROLE"部分をロール名の頭につけるため。
+→つまり、"ROLE"を外さないと"ROLE_ROLE_ADMIN"という意味合いになってしまうので、"ROLE_"を取り外して"ADMIN"としている。
+
+
+
+
+
+
+
+
+
+
+
+
+
